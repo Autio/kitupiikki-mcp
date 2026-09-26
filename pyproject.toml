@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kitupiikki-mcp"
+version = "0.1.0"
+description = "MCP server / agent interface for Kitsas (kitupiikki) bookkeeping files – unofficial"
+readme = "README.md"
+license = "GPL-3.0-or-later"
+requires-python = ">=3.10"
+authors = [{ name = "Petri Autio" }]
+dependencies = ["mcp>=1.2"]
+keywords = ["kitsas", "kitupiikki", "kirjanpito", "bookkeeping", "mcp", "finland"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+kitupiikki-mcp = "kitupiikki_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/kitupiikki_mcp"]

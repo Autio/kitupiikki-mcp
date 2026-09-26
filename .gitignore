@@ -1,0 +1,9 @@
+__pycache__/
+*.egg-info/
+.pytest_cache/
+dist/
+build/
+*.kitsas
+*.kitsas-wal
+*.kitsas-shm
+kitupiikki-mcp-backups/
